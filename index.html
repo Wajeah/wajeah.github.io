@@ -7,91 +7,97 @@
 
 <title>Wajahat Ali | Medical Laboratory Technologist</title>
 
-<meta name="description" content="Wajahat Ali - Medical Laboratory Technologist | MPhil Microbiology & Molecular Genetics | QA/QC Expert | Clinical Diagnostics Specialist">
-<meta name="keywords" content="Wajahat Ali, Medical Lab Technologist, Microbiology, Pathology, QA QC, Roche, Abbott, Sysmex, DHA Lab Jobs">
+<meta name="description" content="Wajahat Ali - Medical Laboratory Technologist, MPhil Microbiology & Molecular Genetics. Professional laboratory expert in Pakistan.">
+<meta name="keywords" content="Medical Laboratory Technologist, Wajahat Ali, Microbiology, Lab Technician Pakistan, QA QC, Pathology">
 <meta name="author" content="Wajahat Ali">
 
 <style>
 
-/* ANIMATION */
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+@keyframes fadeIn {
+from {opacity:0; transform:translateY(20px);}
+to {opacity:1; transform:translateY(0);}
 }
 
 body{
 margin:0;
 font-family:Arial;
-background:#050b18;
+background:#061a33;
 color:white;
 scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+position:sticky;
+top:0;
+background:#0b3d91;
+padding:12px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
 }
 
 /* HERO */
 .hero{
 text-align:center;
 padding:90px 20px;
-background:linear-gradient(135deg,#0b3d91,#02050d);
-animation:fadeUp 1s ease;
+background:linear-gradient(135deg,#0b3d91,#020b18);
+animation:fadeIn 1s ease-in-out;
 }
 
 .hero img{
 width:180px;
 height:180px;
 border-radius:50%;
-border:5px solid #4da3ff;
+border:5px solid white;
 object-fit:cover;
-box-shadow:0 0 30px rgba(77,163,255,0.6);
 }
 
 .hero h1{
-font-size:46px;
+font-size:44px;
 margin:15px 0 5px;
 }
 
-.badge{
-display:inline-block;
-background:#4da3ff;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin-top:10px;
-}
-
 .hero p{
-opacity:0.85;
+opacity:0.9;
 }
 
+/* BUTTON */
 .btn{
 display:inline-block;
-margin:10px;
+margin-top:15px;
 padding:12px 20px;
-border-radius:25px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.primary{
-background:#4da3ff;
-color:white;
-}
-
-.secondary{
 background:white;
 color:#0b3d91;
+border-radius:25px;
+font-weight:bold;
+text-decoration:none;
+transition:0.3s;
 }
 
 .btn:hover{
 transform:scale(1.05);
+background:#00d4ff;
+color:white;
 }
 
 /* SECTIONS */
 section{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 padding:60px 20px;
-animation:fadeUp 1s ease;
+animation:fadeIn 1s ease-in-out;
 }
 
 h2{
@@ -100,39 +106,20 @@ color:#4da3ff;
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:12px;
 margin-top:15px;
-border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-/* SKILL BAR */
-.skill{
-margin:10px 0;
-}
-
-.bar{
-background:#1b2a4a;
-border-radius:20px;
-overflow:hidden;
-height:10px;
-}
-
-.fill{
-height:10px;
-background:#4da3ff;
+.card:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,0.12);
 }
 
 /* FLOAT BUTTONS */
-.float{
+.float-btn{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -141,28 +128,37 @@ flex-direction:column;
 gap:10px;
 }
 
-.float a{
-width:52px;
-height:52px;
+.float-btn a{
+width:50px;
+height:50px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
+color:white;
 text-decoration:none;
 font-size:20px;
-color:white;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
-.wa{background:#25D366;}
-.li{background:#0077b5;}
-.em{background:#ff4d4d;}
+.float-btn a:hover{
+transform:scale(1.1);
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.linkedin{
+background:#0077b5;
+}
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-background:#02050d;
+background:#020b18;
 margin-top:40px;
 }
 
@@ -172,91 +168,85 @@ margin-top:40px;
 
 <body>
 
+<!-- NAV -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="home">
 
 <img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg">
 
 <h1>Wajahat Ali</h1>
 
-<div class="badge">Medical Laboratory Technologist</div>
-
+<p>Medical Laboratory Technologist</p>
 <p>MPhil Microbiology & Molecular Genetics</p>
 
-<a class="btn primary" href="cv.pdf" download>Download CV</a>
-<a class="btn secondary" href="#contact">Contact Me</a>
+<a class="btn" href="cv.pdf" download>Download CV</a>
 
 </div>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
 <h2>About Me</h2>
+
 <div class="card">
-Experienced Medical Laboratory Technologist specializing in Clinical Diagnostics, Quality Assurance (IQA/EQA), Biosafety, Laboratory Automation, and Research in Microbiology & Molecular Genetics.
+Experienced Medical Laboratory Technologist with expertise in Clinical Chemistry, Hematology, Microbiology, Quality Assurance (IQA/EQA), Biosafety, and Laboratory Automation systems.
 </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section>
-<h2>Experience Timeline</h2>
+<section id="experience">
+<h2>Experience</h2>
 
 <div class="card">🏥 Buch International Hospital — Medical Lab Technologist (Present)</div>
 <div class="card">🧪 Test Zone Laboratory — QA/QC & Diagnostics</div>
-<div class="card">🧫 Ayesha Clinical Laboratory — Routine Testing & Biosafety</div>
+<div class="card">🧫 Ayesha Clinical Laboratory — Routine Lab Operations</div>
 
 </section>
 
 <!-- SKILLS -->
-<section>
-<h2>Technical Skills</h2>
+<section id="skills">
+<h2>Skills</h2>
 
 <div class="card">
-
-Microbiology
-<div class="bar"><div class="fill" style="width:92%"></div></div>
-
-Hematology
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-
-QA/QC Systems
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-
-Roche / Abbott / Sysmex
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-
+✔ Quality Assurance (IQA / EQA)<br><br>
+✔ Microbiology<br><br>
+✔ Hematology<br><br>
+✔ Clinical Chemistry<br><br>
+✔ Roche & Abbott Systems<br><br>
+✔ Sysmex Analyzer<br><br>
+✔ Laboratory Management
 </div>
-</section>
 
-<!-- RESEARCH -->
-<section>
-<h2>Research & Projects</h2>
-<div class="card">
-✔ CABG Pneumonia Study (ICU Patients)<br>
-✔ Hepatitis B & C Screening (ELISA vs ICT)<br>
-✔ Hospital Microbial Prevalence Analysis
-</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
+
 <div class="card">
-📧 Email: mrwajeah@mail.com<br>
-📱 Phone: 0303-3525180<br>
-📍 Location: Multan, Pakistan
+📧 mrwajeah@mail.com<br>
+📱 0303-3525180<br>
+📍 Multan, Pakistan
 </div>
+
 </section>
 
 <footer>
 © 2026 Wajahat Ali | Medical Laboratory Technologist
 </footer>
 
-<!-- FLOATING BUTTONS -->
-<div class="float">
+<!-- FLOAT BUTTONS -->
+<div class="float-btn">
 
-<a class="wa" href="https://wa.me/923033525180" target="_blank">📱</a>
-<a class="li" href="https://linkedin.com" target="_blank">in</a>
-<a class="em" href="mailto:mrwajeah@mail.com">✉</a>
+<a class="whatsapp" href="https://wa.me/923033525180" target="_blank">📱</a>
+<a class="linkedin" href="https://www.linkedin.com" target="_blank">in</a>
 
 </div>
 
