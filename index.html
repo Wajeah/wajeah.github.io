@@ -9,68 +9,107 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0b1f3a;
+background:#071a33;
 color:white;
+scroll-behavior:smooth;
 }
 
+/* NAV */
+nav{
+position:sticky;
+top:0;
+background:#0b3d91;
+padding:12px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
 .hero{
 text-align:center;
-padding:60px 20px;
-background:linear-gradient(135deg,#0b3d91,#071a33);
+padding:80px 20px;
+background:linear-gradient(135deg,#0b3d91,#050f1f);
 }
 
 .hero img{
-width:160px;
-height:160px;
+width:180px;
+height:180px;
 border-radius:50%;
+border:5px solid white;
 object-fit:cover;
-border:4px solid white;
-margin-bottom:15px;
 }
 
 .hero h1{
-margin:10px 0;
-font-size:40px;
+font-size:42px;
+margin:15px 0 5px;
 }
 
 .hero p{
 margin:5px;
 opacity:0.9;
+font-size:16px;
 }
 
 .btn{
 display:inline-block;
 margin-top:15px;
-padding:10px 18px;
+padding:12px 20px;
 background:white;
 color:#0b3d91;
 border-radius:25px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
+/* SECTIONS */
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:40px 20px;
-}
-
-.card{
-background:white;
-color:black;
-padding:20px;
-border-radius:12px;
-margin-top:15px;
+padding:60px 20px;
 }
 
 h2{
 color:#4da3ff;
+font-size:28px;
+margin-bottom:20px;
 }
 
+/* CARDS */
+.card{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:12px;
+margin-top:15px;
+line-height:1.6;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+/* SKILLS */
+.skill{
+background:#0b3d91;
+padding:10px;
+border-radius:8px;
+margin:8px 0;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-background:#061225;
+background:#050f1f;
 margin-top:40px;
 }
 </style>
@@ -78,7 +117,18 @@ margin-top:40px;
 
 <body>
 
-<div class="hero">
+<!-- NAV -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
 
 <img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg">
 
@@ -88,37 +138,86 @@ margin-top:40px;
 <p>MPhil Microbiology & Molecular Genetics</p>
 
 <a class="btn" href="cv.pdf" download>Download CV</a>
-
 </div>
 
-<section>
-
+<!-- ABOUT -->
+<section id="about">
 <h2>About Me</h2>
 
 <div class="card">
-Experienced Medical Laboratory Technologist working in diagnostic laboratory services with expertise in QA/QC, microbiology, hematology, and automated systems.
+Experienced Medical Laboratory Technologist with strong expertise in Clinical Chemistry, Hematology, Microbiology, Quality Assurance (IQA/EQA), Biosafety, Calibration and Laboratory Automation.
+<br><br>
+Currently working in a high-volume diagnostic laboratory environment with experience in advanced instruments and workflow optimization.
 </div>
+</section>
 
-<h2>Experience</h2>
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<div class="grid">
 
 <div class="card">
-Buch International Hospital<br>
-Test Zone Laboratory<br>
-Ayesha Clinical Laboratory
+<b>Buch International Hospital</b><br>
+Medical Lab Technologist (Present)<br>
+QA/QC, Instrument handling, training, audits
 </div>
 
+<div class="card">
+<b>Test Zone Laboratory</b><br>
+Medical Lab Technologist<br>
+Quality control & lab operations
+</div>
+
+<div class="card">
+<b>Ayesha Clinical Laboratory</b><br>
+Medical Lab Technologist<br>
+Routine diagnostics & biosafety
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<b>MPhil Microbiology & Molecular Genetics</b> — BZU Multan (2024–2026)<br><br>
+<b>BS Medical Laboratory Technology</b> — KFUEIT (2019–2023)<br><br>
+Intermediate & Matric — BISE Bahawalpur
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="card">
+<div class="skill">Quality Assurance (IQA / EQA)</div>
+<div class="skill">Microbiology</div>
+<div class="skill">Hematology</div>
+<div class="skill">Clinical Chemistry</div>
+<div class="skill">Abbott & Roche Systems</div>
+<div class="skill">Sysmex Hematology Analyzer</div>
+<div class="skill">Biosafety & Lab Management</div>
+<div class="skill">LIMS & Data Handling</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
 <h2>Contact</h2>
 
 <div class="card">
-Email: mrwajeah@mail.com<br>
-Phone: 0303-3525180<br>
-Location: Multan, Pakistan
+📧 Email: <b>mrwajeah@mail.com</b><br>
+📱 Phone: 0303-3525180<br>
+📍 Location: Multan, Pakistan<br>
 </div>
-
 </section>
 
 <footer>
-© 2026 Wajahat Ali
+© 2026 Wajahat Ali | Medical Laboratory Technologist
 </footer>
 
 </body>
