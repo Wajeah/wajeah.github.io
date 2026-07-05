@@ -4,34 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wajahat Ali | Medical Laboratory Technologist</title>
+<title>Wajahat Ali | Professional Portfolio</title>
 
 <style>
 
-html {
-scroll-behavior: smooth;
+/* ================= RESET ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-font-family:Arial, sans-serif;
 background:#061a33;
 color:white;
 }
 
-/* NAV */
+/* ================= NAV ================= */
 nav{
-position:sticky;
+position:fixed;
 top:0;
+width:100%;
 background:#0b3d91;
+display:flex;
+justify-content:center;
 padding:12px;
-text-align:center;
 z-index:1000;
 }
 
 nav a{
 color:white;
-margin:10px;
+margin:0 15px;
 text-decoration:none;
 font-weight:bold;
 }
@@ -40,43 +48,58 @@ nav a:hover{
 color:#00d4ff;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
-background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
 url("file_000000003a3c72068b2f0f2fe7838efb") center/cover no-repeat;
 }
 
 .hero img{
-width:170px;
-height:170px;
+width:160px;
+height:160px;
 border-radius:50%;
-border:5px solid white;
-object-fit:cover;
-margin-top:20px;
+border:4px solid white;
+margin-bottom:15px;
 }
 
 .hero h1{
-font-size:42px;
-margin:10px 0;
+font-size:50px;
+margin-bottom:10px;
 }
 
-.hero p{
-margin:5px;
+.typing{
+font-size:18px;
 opacity:0.9;
+border-right:2px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 4s steps(40,end) forwards;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:320px}
 }
 
 /* BUTTON */
 .btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 22px;
+margin-top:20px;
+padding:12px 25px;
 background:white;
 color:#0b3d91;
-border-radius:25px;
-font-weight:bold;
+border-radius:30px;
 text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
 .btn:hover{
@@ -84,56 +107,94 @@ background:#00d4ff;
 color:white;
 }
 
-/* SECTION */
+/* ================= SECTIONS ================= */
 section{
-max-width:900px;
-margin:auto;
-padding:50px 20px;
+padding:80px 15%;
 }
 
 h2{
-color:#4da3ff;
+color:#00d4ff;
+margin-bottom:20px;
+font-size:28px;
 }
 
-/* CARD */
+/* ================= CARDS ================= */
 .card{
 background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:12px;
-margin-top:15px;
+margin-bottom:15px;
+transition:0.3s;
 }
 
-/* FLOAT BUTTONS */
-.float-btn{
+.card:hover{
+transform:translateY(-5px);
+background:rgba(255,255,255,0.15);
+}
+
+/* ================= TIMELINE ================= */
+.timeline{
+border-left:3px solid #00d4ff;
+padding-left:20px;
+}
+
+.timeline div{
+margin-bottom:20px;
+}
+
+/* ================= SKILLS ================= */
+.skill{
+margin-bottom:15px;
+}
+
+.bar{
+height:10px;
+background:#1a2b4d;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:10px;
+background:#00d4ff;
+width:0;
+animation:fill 2s forwards;
+}
+
+@keyframes fill{
+to{width:var(--w)}
+}
+
+/* ================= FLOAT BUTTON ================= */
+.float{
 position:fixed;
-right:20px;
 bottom:20px;
+right:20px;
 display:flex;
 flex-direction:column;
 gap:10px;
 }
 
-.float-btn a{
+.float a{
 width:50px;
 height:50px;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-decoration:none;
-font-size:18px;
 color:white;
+font-size:18px;
 }
 
-.whatsapp{background:#25D366;}
-.linkedin{background:#0077b5;}
+.w{background:#25D366;}
+.l{background:#0077b5;}
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
 text-align:center;
 padding:20px;
 background:#020b18;
-margin-top:30px;
 }
 
 </style>
@@ -151,52 +212,69 @@ margin-top:30px;
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
+<section class="hero" id="home">
 
-<img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg" alt="Profile">
+<img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg">
 
 <h1>Wajahat Ali</h1>
 
-<p>Medical Laboratory Technologist</p>
-<p>MPhil Microbiology & Molecular Genetics</p>
-<p>BS Medical Laboratory Technology</p>
+<div class="typing">
+Medical Laboratory Technologist | MPhil Microbiology | BS MLT
+</div>
 
 <a class="btn" href="cv.pdf" download>Download CV</a>
-
-</div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 
 <div class="card">
-Experienced Medical Laboratory Technologist with strong expertise in Clinical Chemistry, Hematology, Microbiology, Quality Assurance (IQA/EQA), Biosafety, Calibration, and Laboratory Automation.  
-Working in a high-volume diagnostic laboratory with strong skills in modern analyzer systems and workflow optimization.
+Professional Medical Laboratory Technologist with expertise in Clinical Chemistry, Hematology, Microbiology, QA/QC, Biosafety, Calibration, and Laboratory Automation.
 </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+<h2>Education</h2>
+
+<div class="card">🎓 MPhil Microbiology & Molecular Genetics</div>
+<div class="card">🎓 BS Medical Laboratory Technology</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 
-<div class="card">🏥 Buch International Hospital — Senior Medical Lab Technologist</div>
-<div class="card">🧪 Test Zone Laboratory</div>
-<div class="card">🧫 Ayesha Clinical Laboratory</div>
+<div class="timeline">
+<div>🏥 Buch International Hospital — Senior Lab Technologist</div>
+<div>🧪 Test Zone Laboratory</div>
+<div>🧫 Ayesha Clinical Laboratory</div>
+</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 
-<div class="card">
-✔ Quality Assurance (IQA / EQA) <br>
-✔ Calibration & Maintenance <br>
-✔ SOP Documentation <br>
-✔ Microbiology <br>
-✔ Hematology <br>
-✔ Clinical Chemistry <br>
-✔ Roche, Abbott, Mindray, Sysmex, Vidas, Snibe analyzers <br>
-✔ Laboratory Management & Inventory Control
+<div class="skill">
+Hematology
+<div class="bar"><div class="fill" style="--w:90%"></div></div>
+</div>
+
+<div class="skill">
+Microbiology
+<div class="bar"><div class="fill" style="--w:85%"></div></div>
+</div>
+
+<div class="skill">
+Clinical Chemistry
+<div class="bar"><div class="fill" style="--w:88%"></div></div>
+</div>
+
+<div class="skill">
+QA/QC
+<div class="bar"><div class="fill" style="--w:92%"></div></div>
 </div>
 
 </section>
@@ -210,17 +288,17 @@ Working in a high-volume diagnostic laboratory with strong skills in modern anal
 📱 0303-3525180 <br>
 📍 Multan, Pakistan
 </div>
-
 </section>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Wajahat Ali | Medical Laboratory Technologist
+© 2026 Wajahat Ali | Professional Portfolio
 </footer>
 
-<!-- FLOAT BUTTONS -->
-<div class="float-btn">
-<a class="whatsapp" href="https://wa.me/923033525180">📱</a>
-<a class="linkedin" href="https://www.linkedin.com">in</a>
+<!-- FLOAT -->
+<div class="float">
+<a class="w" href="https://wa.me/923033525180">📱</a>
+<a class="l" href="https://linkedin.com">in</a>
 </div>
 
 </body>
