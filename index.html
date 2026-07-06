@@ -1,172 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wajahat Ali | Professional Portfolio</title>
+<title>Wajahat Ali | Medical Laboratory Technologist</title>
+
+<meta name="description" content="Wajahat Ali - Medical Laboratory Technologist, MPhil Microbiology & Molecular Genetics BS Medical lab technology.">
+<meta name="keywords" content="Medical Laboratory Technologist, Wajahat Ali, Microbiology, Lab Technician Pakistan, QA QC, Pathology">
+<meta name="author" content="Wajahat Ali">
 
 <style>
 
-/* ================= RESET ================= */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+html {
+scroll-behavior: smooth;
 }
 
-html{
-scroll-behavior:smooth;
+@keyframes fadeIn {
+from {opacity:0; transform:translateY(20px);}
+to {opacity:1; transform:translateY(0);}
 }
 
 body{
+margin:0;
+font-family:Arial, sans-serif;
 background:#061a33;
 color:white;
 }
 
-/* ================= NAV ================= */
+/* NAV */
 nav{
-position:fixed;
+position:sticky;
 top:0;
-width:100%;
 background:#0b3d91;
-display:flex;
-justify-content:center;
 padding:12px;
+text-align:center;
 z-index:1000;
 }
 
 nav a{
 color:white;
-margin:0 15px;
+margin:10px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#00d4ff;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url("file_000000003a3c72068b2f0f2fe7838efb") center/cover no-repeat;
+padding:90px 20px;
+background:linear-gradient(135deg,#0b3d91,#020b18);
+animation:fadeIn 1s ease-in-out;
 }
 
 .hero img{
-width:160px;
-height:160px;
+width:180px;
+height:180px;
 border-radius:50%;
-border:4px solid white;
-margin-bottom:15px;
+border:5px solid white;
+object-fit:cover;
+max-width:100%;
 }
 
 .hero h1{
-font-size:50px;
-margin-bottom:10px;
+font-size:44px;
+margin:15px 0 5px;
 }
 
-.typing{
-font-size:18px;
+.hero p{
 opacity:0.9;
-border-right:2px solid white;
-white-space:nowrap;
-overflow:hidden;
-width:0;
-animation:typing 4s steps(40,end) forwards;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:320px}
 }
 
 /* BUTTON */
 .btn{
-margin-top:20px;
-padding:12px 25px;
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
 background:white;
 color:#0b3d91;
-border-radius:30px;
-text-decoration:none;
+border-radius:25px;
 font-weight:bold;
+text-decoration:none;
 transition:0.3s;
 }
 
 .btn:hover{
+transform:scale(1.05);
 background:#00d4ff;
 color:white;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 section{
-padding:80px 15%;
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+animation:fadeIn 1s ease-in-out;
 }
 
 h2{
-color:#00d4ff;
-margin-bottom:20px;
-font-size:28px;
+color:#4da3ff;
 }
 
-/* ================= CARDS ================= */
+/* CARD */
 .card{
 background:rgba(255,255,255,0.08);
 padding:20px;
 border-radius:12px;
-margin-bottom:15px;
+margin-top:15px;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.12);
 }
 
-/* ================= TIMELINE ================= */
-.timeline{
-border-left:3px solid #00d4ff;
-padding-left:20px;
-}
-
-.timeline div{
-margin-bottom:20px;
-}
-
-/* ================= SKILLS ================= */
-.skill{
-margin-bottom:15px;
-}
-
-.bar{
-height:10px;
-background:#1a2b4d;
-border-radius:20px;
-overflow:hidden;
-}
-
-.fill{
-height:10px;
-background:#00d4ff;
-width:0;
-animation:fill 2s forwards;
-}
-
-@keyframes fill{
-to{width:var(--w)}
-}
-
-/* ================= FLOAT BUTTON ================= */
-.float{
+/* FLOAT BUTTONS */
+.float-btn{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -175,29 +132,42 @@ flex-direction:column;
 gap:10px;
 }
 
-.float a{
+.float-btn a{
 width:50px;
 height:50px;
 border-radius:50%;
 display:flex;
-justify-content:center;
 align-items:center;
-text-decoration:none;
+justify-content:center;
 color:white;
-font-size:18px;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
-.w{background:#25D366;}
-.l{background:#0077b5;}
+.float-btn a:hover{
+transform:scale(1.1);
+}
 
-/* ================= FOOTER ================= */
+.whatsapp{
+background:#25D366;
+}
+
+.linkedin{
+background:#0077b5;
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
 background:#020b18;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -212,69 +182,57 @@ background:#020b18;
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<div class="hero" id="home">
 
-<img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg">
+<img src="WhatsApp Image 2026-03-05 at 7.01.47 PM.jpeg" alt="Wajahat Ali Profile Photo">
 
 <h1>Wajahat Ali</h1>
 
-<div class="typing">
-Medical Laboratory Technologist | MPhil Microbiology | BS MLT
-</div>
+<p>Medical Laboratory Technologist</p>
+<p>MPhil Microbiology & Molecular Genetics</p>
+<p>BS Medical Laboratory Technology</p>
 
 <a class="btn" href="cv.pdf" download>Download CV</a>
-</section>
+
+<a class="btn" href="cv.pdf" download>Download CV</a>
+
+</div>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 
 <div class="card">
-Professional Medical Laboratory Technologist with expertise in Clinical Chemistry, Hematology, Microbiology, QA/QC, Biosafety, Calibration, and Laboratory Automation.
+Experienced Medical Laboratory Technologist with strong expertise in Clinical Chemistry, Hematology, Microbiology, Quality Assurance (IQA/EQA), Biosafety, Calibration and Laboratory Automation.  
+
+Currently working in a high-volume diagnostic laboratory environment with experience in advanced instruments and workflow optimization.
 </div>
-</section>
 
-<!-- EDUCATION -->
-<section>
-<h2>Education</h2>
-
-<div class="card">🎓 MPhil Microbiology & Molecular Genetics</div>
-<div class="card">🎓 BS Medical Laboratory Technology</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 
-<div class="timeline">
-<div>🏥 Buch International Hospital — Senior Lab Technologist</div>
-<div>🧪 Test Zone Laboratory</div>
-<div>🧫 Ayesha Clinical Laboratory</div>
-</div>
+<div class="card">🏥 Buch International Hospital — Senior Medical Lab Technologist</div>
+<div class="card">🧪 Test Zone Laboratory</div>
+<div class="card">🧫 Ayesha Clinical Laboratory</div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 
-<div class="skill">
-Hematology
-<div class="bar"><div class="fill" style="--w:90%"></div></div>
-</div>
-
-<div class="skill">
-Microbiology
-<div class="bar"><div class="fill" style="--w:85%"></div></div>
-</div>
-
-<div class="skill">
-Clinical Chemistry
-<div class="bar"><div class="fill" style="--w:88%"></div></div>
-</div>
-
-<div class="skill">
-QA/QC
-<div class="bar"><div class="fill" style="--w:92%"></div></div>
+<div class="card">
+✔ Quality Assurance (IQA / EQA) Calibrations <br><br>
+✔ Documentation (SOPs) <br><br>
+✔ Microbiology <br><br>
+✔ Hematology <br><br>
+✔ Clinical Chemistry <br><br>
+✔ Operation of Roche, Abbott, Mindray, Vidas, Snibe & Sysmex analyzers <br><br>
+✔ Inventory and Supply Chain Management <br><br>
+✔ Laboratory Management
 </div>
 
 </section>
@@ -284,21 +242,23 @@ QA/QC
 <h2>Contact</h2>
 
 <div class="card">
-📧 mrwajeah@mail.com <br>
-📱 0303-3525180 <br>
+📧 mrwajeah@mail.com<br>
+📱 0303-3525180<br>
 📍 Multan, Pakistan
 </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 Wajahat Ali | Professional Portfolio
+Wajahat Ali | Senior Medical Laboratory Technologist
 </footer>
 
-<!-- FLOAT -->
-<div class="float">
-<a class="w" href="https://wa.me/923033525180">📱</a>
-<a class="l" href="https://linkedin.com">in</a>
+<!-- FLOAT BUTTONS -->
+<div class="float-btn">
+
+<a class="whatsapp" href="https://wa.me/923033525180" target="_blank" rel="noopener noreferrer">📱</a>
+<a class="linkedin" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
+
 </div>
 
 </body>
